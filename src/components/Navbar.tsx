@@ -16,24 +16,12 @@ function Navbar() {
   }, [theme]);
 
   return (
-    <nav className="container mx-auto w-full shadow p-4 md:grid flex justify-between md:grid-cols-3 items-center dark:bg-gray-900 dark:text-white">
-      <a href="#" className="flex items-center gap-2.5">
-        <img src={appLogo} alt="App Logo" className="max-w-10" />
-        <p className="md:text-2xl text-xl font-semibold">Tiktok Downloader</p>
+    <nav className="container mx-auto w-full shadow-lg p-4  flex justify-between  items-center dark:bg-gray-900 dark:text-white">
+      <a href="#" className="flex items-center gap-2.5 w-full">
+        <img src={appLogo} alt="Tiktok Downloader" className="max-w-10" />
+        <p className="lg:text-2xl text-xl font-semibold">Tiktok Downloader</p>
       </a>
-      <ul className="navlink md:flex items-center justify-center text-center gap-6 hidden">
-        <li>
-          <a href="#home" className="font-medium text-lg dark:text-gray-200">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#tutorial" className="font-medium text-lg dark:text-gray-200">
-            Tutorial
-          </a>
-        </li>
-      </ul>
-      <div className="mode  items-end justify-end flex">
+      <div className="mode  items-end justify-end flex w-fit">
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800"
